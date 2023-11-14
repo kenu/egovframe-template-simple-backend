@@ -25,14 +25,14 @@ public class EgovWebUtil {
 
 		String returnValue = value;
 
-		returnValue = returnValue.replaceAll("&", "&amp;");
-		returnValue = returnValue.replaceAll("<", "&lt;");
-		returnValue = returnValue.replaceAll(">", "&gt;");
-		returnValue = returnValue.replaceAll("\"", "&#34;");
-		returnValue = returnValue.replaceAll("\'", "&#39;");
-		returnValue = returnValue.replaceAll("\\.", "&#46;");
-		returnValue = returnValue.replaceAll("%2E", "&#46;");
-		returnValue = returnValue.replaceAll("%2F", "&#47;");
+		returnValue = returnValue.replace("&", "&amp;");
+		returnValue = returnValue.replace("<", "&lt;");
+		returnValue = returnValue.replace(">", "&gt;");
+		returnValue = returnValue.replace("\"", "&#34;");
+		returnValue = returnValue.replace("\'", "&#39;");
+		returnValue = returnValue.replace("\\.", "&#46;");
+		returnValue = returnValue.replace("%2E", "&#46;");
+		returnValue = returnValue.replace("%2F", "&#47;");
 		return returnValue;
 	}
 
@@ -40,16 +40,16 @@ public class EgovWebUtil {
 		String returnValue = value;
 		returnValue = clearXSSMinimum(returnValue);
 
-		returnValue = returnValue.replaceAll("%00", null);
+		returnValue = returnValue.replace("%00", null);
 
-		returnValue = returnValue.replaceAll("%", "&#37;");
+		returnValue = returnValue.replace("%", "&#37;");
 
 		// \\. => .
 
-		returnValue = returnValue.replaceAll("\\.\\./", ""); // ../
-		returnValue = returnValue.replaceAll("\\.\\.\\\\", ""); // ..\
-		returnValue = returnValue.replaceAll("\\./", ""); // ./
-		returnValue = returnValue.replaceAll("%2F", "");
+		returnValue = returnValue.replace("\\.\\./", ""); // ../
+		returnValue = returnValue.replace("\\.\\.\\\\", ""); // ..\
+		returnValue = returnValue.replace("\\./", ""); // ./
+		returnValue = returnValue.replace("%2F", "");
 
 		return returnValue;
 	}
@@ -60,7 +60,7 @@ public class EgovWebUtil {
 			return "";
 		}
 
-		returnValue = returnValue.replaceAll("\\.\\.", "");
+		returnValue = returnValue.replace("\\.\\.", "");
 
 		return returnValue;
 	}
@@ -71,31 +71,31 @@ public class EgovWebUtil {
 	 * @param value
 	 * @return
 	 */
-	public static String filePathReplaceAll(String value) {
+	public static String filePathreplace(String value) {
 		String returnValue = value;
 		if (returnValue == null || returnValue.trim().equals("")) {
 			return "";
 		}
 
-		returnValue = returnValue.replaceAll("/", "");
-		returnValue = returnValue.replaceAll("\\\\", ""); // \
-		returnValue = returnValue.replaceAll("\\.\\.", ""); // ..
-		returnValue = returnValue.replaceAll("&", "");
+		returnValue = returnValue.replace("/", "");
+		returnValue = returnValue.replace("\\\\", ""); // \
+		returnValue = returnValue.replace("\\.\\.", ""); // ..
+		returnValue = returnValue.replace("&", "");
 
 		return returnValue;
 	}
-	
-	public static String fileInjectPathReplaceAll(String value) {
+
+	public static String fileInjectPathreplace(String value) {
 		String returnValue = value;
 		if (returnValue == null || returnValue.trim().equals("")) {
 			return "";
 		}
 
-		
-		returnValue = returnValue.replaceAll("/", "");
-		returnValue = returnValue.replaceAll("\\..", ""); // ..
-		returnValue = returnValue.replaceAll("\\\\", "");// \
-		returnValue = returnValue.replaceAll("&", "");
+
+		returnValue = returnValue.replace("/", "");
+		returnValue = returnValue.replace("\\..", ""); // ..
+		returnValue = returnValue.replace("\\\\", "");// \
+		returnValue = returnValue.replace("&", "");
 
 		return returnValue;
 	}
@@ -111,15 +111,15 @@ public class EgovWebUtil {
     }
 
 	public static String removeCRLF(String parameter) {
-		return parameter.replaceAll("\r", "").replaceAll("\n", "");
+		return parameter.replace("\r", "").replace("\n", "");
 	}
 
 	public static String removeSQLInjectionRisk(String parameter) {
-		return parameter.replaceAll("\\p{Space}", "").replaceAll("\\*", "").replaceAll("%", "").replaceAll(";", "").replaceAll("-", "").replaceAll("\\+", "").replaceAll(",", "");
+		return parameter.replace("\\p{Space}", "").replace("\\*", "").replace("%", "").replace(";", "").replace("-", "").replace("\\+", "").replace(",", "");
 	}
 
 	public static String removeOSCmdRisk(String parameter) {
-		return parameter.replaceAll("\\p{Space}", "").replaceAll("\\*", "").replaceAll("\\|", "").replaceAll(";", "");
+		return parameter.replace("\\p{Space}", "").replace("\\*", "").replace("\\|", "").replace(";", "");
 	}
 
 }
