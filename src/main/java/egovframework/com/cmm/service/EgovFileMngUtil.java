@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -78,8 +79,8 @@ public class EgovFileMngUtil {
 	} else {
 	    storePathString = propertyService.getString(storePath);
 	}
-	
-	atchFileId = atchFileId.replaceAll("\\s", "");
+
+	atchFileId = atchFileId.replace(" ", "");
 
 	if ("".equals(atchFileId) || atchFileId == null) {
 	    atchFileIdString = idgenService.getNextStringId();
@@ -104,7 +105,7 @@ public class EgovFileMngUtil {
 
 	    file = entry.getValue();
 	    String orginFileName = file.getOriginalFilename();
-	    
+
 	    //--------------------------------------
 	    // 원 파일명이 null인 경우 처리
 	    //--------------------------------------
@@ -121,7 +122,7 @@ public class EgovFileMngUtil {
 		continue;
 	    }
 	    ////------------------------------------
-	    
+
 		int index = orginFileName.lastIndexOf(".");
 	    //String fileName = orginFileName.substring(0, index);
 	    String fileExt = orginFileName.substring(index + 1);
@@ -239,7 +240,7 @@ public class EgovFileMngUtil {
 	}
 
 	byte[] b = new byte[BUFF_SIZE]; //buffer size 2K.
-    String fName = (new String(orgFileName.getBytes(), "UTF-8")).replaceAll("\r\n","");
+    String fName = (new String(orgFileName.getBytes(), StandardCharsets.UTF_8)).replaceAll("\r\n","");
 	response.setContentType("application/x-msdownload");
 	response.setHeader("Content-Disposition:", "attachment; filename=" + fName);
 	response.setHeader("Content-Transfer-Encoding", "binary");
@@ -369,8 +370,8 @@ public class EgovFileMngUtil {
      * @throws Exception
      */
     public void downFile(HttpServletResponse response, String streFileNm, String orignFileNm) throws Exception {
-    //	String downFileName = EgovStringUtil.isNullToString(request.getAttribute("downFile")).replaceAll("..","");
-    //	String orgFileName = EgovStringUtil.isNullToString(request.getAttribute("orgFileName")).replaceAll("..","");
+    //	String downFileName = EgovStringUtil.isNullToString(request.getAttribute("downFile")).replace("..","");
+    //	String orgFileName = EgovStringUtil.isNullToString(request.getAttribute("orgFileName")).replace("..","");
     String downFileName = EgovWebUtil.filePathBlackList(EgovStringUtil.isNullToString(streFileNm));
     String orgFileName = EgovWebUtil.filePathBlackList(EgovStringUtil.isNullToString(orignFileNm));
 
