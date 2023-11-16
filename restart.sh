@@ -18,3 +18,4 @@ echo "pid : $pid"
 
 # Start 및 해당 PID 파일로 만들기
 sudo nohup java -jar ./target/sht_webapp.jar 2>> /dev/null >> /dev/null &
+curl localhost:8080
