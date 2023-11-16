@@ -1,4 +1,4 @@
-cd $TARGET_PATH
+# cd $TARGET_PATH
 
 # Stop 만들어진 PID로 서비스 종료
 # pid=`cat ./application.pid 2> /dev/null`
