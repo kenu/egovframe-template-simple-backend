@@ -11,6 +11,7 @@ cd $TARGET_PATH
 #   sudo kill $pid
 # fi
 cat ./application.pid
+pwd
 pid=`cat ./application.pid 2> /dev/null`
 sudo kill $pid
 echo "pid : $pid"
