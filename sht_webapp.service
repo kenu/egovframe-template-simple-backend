@@ -1,0 +1,14 @@
+[Unit]
+Description=sht_webapp
+After=syslog.target network.target
+
+[Service]
+User=ec2-user
+Group=ec2-user
+
+ExecStart=/home/ec2-user/.sdkman/candidates/java/current/bin/java -jar /home/ec2-user/app/sht_webapp.jar
+ExecStop=/bin/kill -15 $MAINPID
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
