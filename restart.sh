@@ -10,6 +10,7 @@ cd $TARGET_PATH
 #   echo "Stopping..."
 #   sudo kill $pid
 # fi
+cat ./application.pid
 pid=`cat ./application.pid 2> /dev/null`
 sudo kill $pid
 echo "pid : $pid"
