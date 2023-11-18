@@ -3,7 +3,7 @@
 ![java](https://img.shields.io/badge/java-007396?style=for-the-badge&logo=JAVA&logoColor=white)
 ![Spring_boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
 ![maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![swagger](https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)  
+![swagger](https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
 ![workflow](https://github.com/eGovFramework/egovframe-template-simple-backend/actions/workflows/maven.yml/badge.svg)
 
 ※ 본 프로젝트는 기존 JSP 뷰 방식에서 벗어나 BackEnd와 FrontEnd를 분리하기 위한 예시 파일로 참고만 하시길 바랍니다.
@@ -30,8 +30,8 @@ mvn spring-boot:run
 
 ### 구동 후 확인
 
-구동 후, 브라우저에서 `http://localhost:포트번호/` 로 확인이 가능하다.  
-초기 포트번호는 8080이며 `/src/main/resources/application.properties` 파일의 `server.port` 항목에서 변경 가능하다.  
+구동 후, 브라우저에서 `http://localhost:포트번호/` 로 확인이 가능하다.
+초기 포트번호는 8080이며 `/src/main/resources/application.properties` 파일의 `server.port` 항목에서 변경 가능하다.
 또한, `http://localhost:포트번호/swagger-ui/index.html#/` 로 애플리케이션의 엔드포인트를 확인 가능하다.
 
 ## FrontEnd 구동 (React)
@@ -51,7 +51,7 @@ mvn spring-boot:run
 
 ### 2. API 변환
 
-직접 View와 연결하던 방법에서 API 형식으로 변환 -> 다양한 프론트에서 적용 가능 하도록 예제 제공
+직접 View와 연결하던 방법에서 API 형식으로 변환 -> 다양한 프론트에서 적용 가능하도록 예제 제공
 
 ※ API를 사용한 Controller들은 ~ApiController.java에서 확인 가능합니다.
 
