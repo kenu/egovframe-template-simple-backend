@@ -49,7 +49,7 @@ public class EgovComUtlController {
 	/**
 	 * JSP 호출작업만 처리하는 공통 함수
 	 */
-	@RequestMapping(value="/EgovPageLink.do")
+	@RequestMapping(value="/EgovPageLink.do", method = RequestMethod.POST)
 	public String moveToPage(@RequestParam("link") String linkPage,
 		HttpSession session,
 		@RequestParam(value = "menuNo", required = false) String menuNo) {
