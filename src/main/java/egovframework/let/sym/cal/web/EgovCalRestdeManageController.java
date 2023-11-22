@@ -97,7 +97,7 @@ public class EgovCalRestdeManageController {
 		restde.setStartWeekMonth(cal.get(Calendar.DAY_OF_WEEK));
 		restde.setLastDayMonth(cal.getActualMaximum(Calendar.DATE));
 
-		List CalInfoList = restdeManageService.selectNormalRestdePopup(restde);
+		List calInfoList = restdeManageService.selectNormalRestdePopup(restde);
 		*/
 
 		cal.set(iYear, iMonth - 1, 1);
@@ -115,7 +115,7 @@ public class EgovCalRestdeManageController {
 		restde.setYear(year);
 		restde.setMonth(month);
 
-		List<ListOrderedMap> CalInfoList = new ArrayList<ListOrderedMap>();
+		List<ListOrderedMap> calInfoList = new ArrayList<>();
 		String tmpDay = "";
 
 		/**
@@ -143,14 +143,14 @@ public class EgovCalRestdeManageController {
 			if (dd > 0 && dd <= lastDay) {
 				week++;
 			}
-			CalInfoList.add(map);
+			calInfoList.add(map);
 
 		}
 		/**
 		 * 계산... END
 		 */
 
-		model.addAttribute("resultList", CalInfoList);
+		model.addAttribute("resultList", calInfoList);
 		return "/cmm/sym/cal/EgovNormalCalendar";
 	}
 
