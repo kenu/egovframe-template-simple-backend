@@ -1,4 +1,4 @@
-# 표준프레임워크 심플홈페이지 BackEnd!
+# 표준프레임워크 심플홈페이지 Backend
 
 ![java](https://img.shields.io/badge/java-007396?style=for-the-badge&logo=JAVA&logoColor=white)
 ![Spring_boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
@@ -6,7 +6,7 @@
 ![swagger](https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
 ![workflow](https://github.com/eGovFramework/egovframe-template-simple-backend/actions/workflows/maven.yml/badge.svg)
 
-※ 본 프로젝트는 기존 JSP 뷰 방식에서 벗어나 BackEnd와 FrontEnd를 분리하기 위한 예시 파일로 참고만 하시길 바랍니다.
+※ 본 프로젝트는 기존 JSP 뷰 방식에서 벗어나 Backend와 Frontend를 분리하기 위한 예시 파일로 참고만 하시길 바랍니다.
 
 ## 환경 설정
 
@@ -16,7 +16,7 @@
 | java | 1.8 이상 |
 | maven | 3.8.4 |
 
-## BackEnd 구동
+## Backend 구동
 
 ### CLI 구동 방법
 
@@ -34,10 +34,10 @@ mvn spring-boot:run
 초기 포트번호는 8080이며 `/src/main/resources/application.properties` 파일의 `server.port` 항목에서 변경 가능하다.
 또한, `http://localhost:포트번호/swagger-ui/index.html#/` 로 애플리케이션의 엔드포인트를 확인 가능하다.
 
-## FrontEnd 구동 (React)
+## Frontend 구동 (React)
 
-현재 FrontEnd는 React 관련 예제로 구성되어 있다.
-[심플홈페이지FrontEnd](https://github.com/eGovFramework/egovframe-template-simple-react.git) 소스를 받아 구동한다.
+현재 Frontend는 React 관련 예제로 구성되어 있다.
+[심플홈페이지Frontend](https://github.com/eGovFramework/egovframe-template-simple-react.git) 소스를 받아 구동한다.
 
 ## 변경 사항
 
