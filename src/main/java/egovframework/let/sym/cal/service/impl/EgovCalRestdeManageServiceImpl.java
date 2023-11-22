@@ -31,7 +31,7 @@ import org.springframework.stereotype.Service;
  *
  * </pre>
  */
-@Service("RestdeManageService")
+@Service("restdeManageService")
 public class EgovCalRestdeManageServiceImpl extends EgovAbstractServiceImpl implements EgovCalRestdeManageService {
 
     @Resource(name="RestdeManageDAO")
