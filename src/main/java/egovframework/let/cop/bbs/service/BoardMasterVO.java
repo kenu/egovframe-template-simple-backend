@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  *  </pre>
  */
-public class BoardMasterVO extends BoardMaster implements Serializable {
+public class BoardMasterVO extends BoardMaster {
 
 	/**
 	 *  serialVersion UID
