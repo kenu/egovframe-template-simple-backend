@@ -20,7 +20,7 @@ package egovframework.let.utl.fcc.service;
 /*
  * Copyright 2001-2006 The Apache Software Foundation.
  *
- * Licensed under the Apache License, Version 2.0 (the ";License&quot;);
+ * Licensed under the Apache License, Version 2.0 (the "License")
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -50,28 +50,11 @@ public class EgovStringUtil {
 	 * 빈 문자열 <code>""</code>.
 	 */
 	public static final String EMPTY = "";
-	
+
 	/**
 	 * 랜덤 객체
 	 */
-	public static SecureRandom rnd = new SecureRandom();
-
-	/**
-	 * <p>Padding을 할 수 있는 최대 수치</p>
-	 */
-	// private static final int PAD_LIMIT = 8192;
-	/**
-	 * <p>An array of <code>String</code>s used for padding.</p>
-	 * <p>Used for efficient space padding. The length of each String expands as needed.</p>
-	 */
-	/*
-	private static final String[] PADDING = new String[Character.MAX_VALUE];
-
-	static {
-		// space padding is most common, start with 64 chars
-		PADDING[32] = "                                                                ";
-	}
-	 */
+	private static SecureRandom rnd = new SecureRandom();
 
 	/**
 	 * 문자열이 지정한 길이를 초과했을때 지정한길이에다가 해당 문자열을 붙여주는 메서드.
