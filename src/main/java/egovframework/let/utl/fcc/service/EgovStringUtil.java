@@ -225,7 +225,7 @@ public class EgovStringUtil {
 	public static String replaceChar(String source, String subject, String object) {
 		StringBuffer rtnStr = new StringBuffer();
 		String preStr = "";
-		String nextStr = source;
+		String nextStr = "";
 		String srcStr = source;
 
 		char chA;
