@@ -202,11 +202,9 @@ public class EgovStringUtil {
 	 */
 	public static String replaceOnce(String source, String subject, String object) {
 		StringBuffer rtnStr = new StringBuffer();
-		String preStr = "";
-		String nextStr = source;
 		if (source.indexOf(subject) >= 0) {
-			preStr = source.substring(0, source.indexOf(subject));
-			nextStr = source.substring(source.indexOf(subject) + subject.length(), source.length());
+			String preStr = source.substring(0, source.indexOf(subject));
+			String nextStr = source.substring(source.indexOf(subject) + subject.length(), source.length());
 			rtnStr.append(preStr).append(object).append(nextStr);
 			return rtnStr.toString();
 		} else {
@@ -296,11 +294,9 @@ public class EgovStringUtil {
 		if (sourceStr == null && compareStr == null) {
 			return returnStr;
 		}
-
-		else if (sourceStr != null && sourceStr.trim().equals(compareStr)) {
+		if (sourceStr != null && sourceStr.trim().equals(compareStr)) {
 			return returnStr;
 		}
-
 		return defaultStr;
 	}
 
@@ -352,7 +348,6 @@ public class EgovStringUtil {
 	 *</pre>
 	 */
 	public static String nullConvert(Object src) {
-		//if (src != null && src.getClass().getName().equals("java.math.BigDecimal")) {
 		if (src != null && src instanceof java.math.BigDecimal) {
 			return ((BigDecimal)src).toString();
 		}
