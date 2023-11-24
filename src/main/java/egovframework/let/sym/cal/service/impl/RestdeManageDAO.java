@@ -35,8 +35,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(일반달력 팝업 날짜정보)
 	 * @throws Exception
 	 */
-	public List<?> selectNormalRestdePopup(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectNormalRestdePopup", restde);
+	public List<Restde> selectNormalRestdePopup(Restde restde) {
+        return selectList("RestdeManageDAO.selectNormalRestdePopup", restde);
 	}
 
 	/**
@@ -45,8 +45,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(행정달력 팝업 날짜정보)
 	 * @throws Exception
 	 */
-	public List<?> selectAdministRestdePopup(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectAdministRestdePopup", restde);
+	public List<Restde> selectAdministRestdePopup(Restde restde) {
+        return selectList("RestdeManageDAO.selectAdministRestdePopup", restde);
 	}
 
 	/**
@@ -55,8 +55,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(일반달력 일간 날짜정보)
 	 * @throws Exception
 	 */
-	public List<?> selectNormalDayCal(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectNormalDayCal", restde);
+	public List<Restde> selectNormalDayCal(Restde restde) {
+        return selectList("RestdeManageDAO.selectNormalDayCal", restde);
 	}
 
 	/**
@@ -65,8 +65,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(일반달력 일간 휴일정보)
 	 * @throws Exception
 	 */
-	public List<?> selectNormalDayRestde(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectNormalDayRestde", restde);
+	public List<Restde> selectNormalDayRestde(Restde restde) {
+        return selectList("RestdeManageDAO.selectNormalDayRestde", restde);
 	}
 
 	/**
@@ -75,8 +75,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(일반달력 월간 휴일정보)
 	 * @throws Exception
 	 */
-	public List<?> selectNormalMonthRestde(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectNormalMonthRestde", restde);
+	public List<Restde> selectNormalMonthRestde(Restde restde) {
+        return selectList("RestdeManageDAO.selectNormalMonthRestde", restde);
 	}
 
 	/**
@@ -85,8 +85,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(행정달력 일간 날짜정보)
 	 * @throws Exception
 	 */
-	public List<?> selectAdministDayCal(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectAdministDayCal", restde);
+	public List<Restde> selectAdministDayCal(Restde restde) {
+        return selectList("RestdeManageDAO.selectAdministDayCal", restde);
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(행정달력 일간 휴일정보)
 	 * @throws Exception
 	 */
-	public List<?> selectAdministDayRestde(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectAdministDayRestde", restde);
+	public List<Restde> selectAdministDayRestde(Restde restde) {
+        return selectList("RestdeManageDAO.selectAdministDayRestde", restde);
 	}
 
 	/**
@@ -105,8 +105,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(행정달력 월간 휴일정보)
 	 * @throws Exception
 	 */
-	public List<?> selectAdministMonthRestde(Restde restde) throws Exception {
-        return list("RestdeManageDAO.selectAdministMonthRestde", restde);
+	public List<Restde> selectAdministMonthRestde(Restde restde) {
+        return selectList("RestdeManageDAO.selectAdministMonthRestde", restde);
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @param restde
 	 * @throws Exception
 	 */
-	public void deleteRestde(Restde restde) throws Exception {
+	public void deleteRestde(Restde restde) {
 		delete("RestdeManageDAO.deleteRestde", restde);
 	}
 
@@ -124,7 +124,7 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @param restde
 	 * @throws Exception
 	 */
-	public void insertRestde(Restde restde) throws Exception {
+	public void insertRestde(Restde restde) {
         insert("RestdeManageDAO.insertRestde", restde);
 	}
 
@@ -134,7 +134,7 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return Restde(휴일)
 	 * @throws Exception
 	 */
-	public Restde selectRestdeDetail(Restde restde) throws Exception {
+	public Restde selectRestdeDetail(Restde restde) {
 		return (Restde) selectOne("RestdeManageDAO.selectRestdeDetail", restde);
 	}
 
@@ -145,8 +145,8 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @return List(휴일 목록)
      * @throws Exception
      */
-	public List<?> selectRestdeList(RestdeVO searchVO) throws Exception {
-        return list("RestdeManageDAO.selectRestdeList", searchVO);
+	public List<Restde> selectRestdeList(RestdeVO searchVO) {
+        return selectList("RestdeManageDAO.selectRestdeList", searchVO);
     }
 
     /**
@@ -155,7 +155,7 @@ public class RestdeManageDAO extends EgovAbstractMapper {
      * @return int(휴일 총 갯수)
      * @throws Exception
      */
-    public int selectRestdeListTotCnt(RestdeVO searchVO) throws Exception {
+    public int selectRestdeListTotCnt(RestdeVO searchVO) {
         return (Integer)selectOne("RestdeManageDAO.selectRestdeListTotCnt", searchVO);
     }
 
@@ -164,7 +164,7 @@ public class RestdeManageDAO extends EgovAbstractMapper {
 	 * @param restde
 	 * @throws Exception
 	 */
-	public void updateRestde(Restde restde) throws Exception {
+	public void updateRestde(Restde restde) {
 		update("RestdeManageDAO.updateRestde", restde);
 	}
 
